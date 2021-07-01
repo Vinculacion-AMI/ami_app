@@ -103,7 +103,7 @@ export const Syllables = React.memo(function SolidGameCard() {
         })
       }
       
-      const url ="http://localhost:4000/stage";
+      const url =process.env.REACT_APP_BACKEND +"/stage";
       
  
       setTimeout(() => {
@@ -130,7 +130,7 @@ export const Syllables = React.memo(function SolidGameCard() {
   };
   const previousLevel = async() => {
     const url =
-    "http://localhost:4000/stage";
+    process.env.REACT_APP_BACKEND +"/stage";
     setData(false);
     let arr = Object.keys(dataJson[level])
     let lastItem =   Object.keys(dataJson[level]).length-1
@@ -203,16 +203,6 @@ export const Syllables = React.memo(function SolidGameCard() {
           })}
         </Grid>
         <Grid container justify="center">
-          <Grid item>
-            <Button
-              onClick={()=>{window.location.replace("http://localhost:3000")}}
-              variant="contained"
-              size="large"
-              className={classes.buttonCheck}
-            >
-              Inicio
-            </Button>
-          </Grid>
           <Grid item>
             <Button
               disabled={subLevel === "nivel1" && level==='Monosílabas'}
