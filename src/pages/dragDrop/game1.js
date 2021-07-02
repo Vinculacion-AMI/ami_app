@@ -55,7 +55,7 @@ function Game1() {
     });
     console.log(aleatorio);
     data2.push(dato1);
-    if(data2[1].name == "Perro"){
+    if(data2[1].name === "Perro"){
       data2.push(data[1]);
     }
     var datos = [];

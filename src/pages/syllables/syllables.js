@@ -54,14 +54,21 @@ export const Syllables = React.memo(function SolidGameCard() {
     const user = localStorage.getItem("user_id");
     const url = process.env.REACT_APP_BACKEND +"/stage/"+user+"/silabas";
     await getDataUser(url).then((response) => {
-      const currentSubLvl = response[0].sub_level;
-      const currentLvl = response[0].level;
+      let resp =response[0];
+        if(resp === undefined){
+          getData();}
+          else{
+            const currentSubLvl = resp.sub_level;
+            const currentLvl = resp.level;
+            
+            setDataId(resp._id)
+            setSubLevel(currentSubLvl);
+            setStage('silabas')
+            setLevel(currentLvl);
+            getContentLvlData(currentSubLvl, currentLvl);
+          }
       
-      setDataId(response[0]._id)
-      setSubLevel(currentSubLvl);
-      setStage('silabas')
-      setLevel(currentLvl);
-      getContentLvlData(currentSubLvl, currentLvl);
+
     })
 
   };

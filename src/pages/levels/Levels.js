@@ -111,7 +111,7 @@ function Levels({ logout, ...rest }) {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      REPITE EL ABECEDARIO
+                      Repite el abecedario
                     </Typography>
                     <Typography
                       variant="body2"
@@ -165,7 +165,7 @@ function Levels({ logout, ...rest }) {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Forma silabas con el abecedario
+                      Forma sílabas con el abecedario
                     </Typography>
                     <Typography
                       variant="body2"
@@ -246,14 +246,14 @@ function Levels({ logout, ...rest }) {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Identifica las silabas
+                      Identifica las sílabas
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Deberas reconocer las palabras monosilabas y bisilabas
+                      Deberas reconocer las palabras monosílabas y bisílabas
                     </Typography>
                     <br />
                     <Button

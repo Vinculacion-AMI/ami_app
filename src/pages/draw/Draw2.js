@@ -50,7 +50,7 @@ function Draw2() {
                 component="h4"
                 className={classes.titleWord}
               >
-                {`Realiza las los circulos y las rayas`}
+                {`Realiza los círculos y las rayas`}
               </Typography>
               </Grid>
               <Grid sm={2}>
