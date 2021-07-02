@@ -72,8 +72,9 @@ function Login(props) {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  if (localStorage.getItem("token") != null) {
-    return props.history.goBack();
+  if (localStorage.getItem("token") != null && localStorage.getItem("loggin") === null) {
+    localStorage.setItem("loggin", false);
+    props.history.push("/");
   }
 
   const statusdisable =
