@@ -120,7 +120,7 @@ const JigSawInit = () => {
                 component="h4"
                 className={classes.titleWord}
               >
-                {`Selecciona las letras para formar "${word}"`}
+                {`Selecciona las letras para formar una palabra`}
               </Typography>
             </form>
           </div>

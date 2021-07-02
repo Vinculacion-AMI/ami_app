@@ -5,7 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { useStyles } from "./style";
 import useForceUpdate from "use-force-update";
-import { Button } from "@material-ui/core";
 import Zoom from "@material-ui/core/Zoom";
 //Function
 import getDataUser from "../../util/get";
@@ -159,29 +158,6 @@ export default function DraggablePiece(props) {
                   </Grid>
                 );
               })}
-            </Grid>
-            <Grid container justify="center">
-              <Grid item>
-                <Button
-                  disabled={!puzzleSolve[0]}
-                  onClick={finalSolve}
-                  variant="contained"
-                  size="large"
-                  color="primary"
-                >
-                  Siguiente
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button
-                  onClick={previousLevel}
-                  variant="contained"
-                  size="large"
-                  color="primary"
-                >
-                  Anterior
-                </Button>
-              </Grid>
             </Grid>
           </Grid>
         </Grid>
