@@ -1,0 +1,6 @@
+.fondo {
+  background-image: "url(" + "../../images/menu/login.jpeg" + ")";
+  background-position: 'center';
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+}
