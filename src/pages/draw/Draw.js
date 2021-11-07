@@ -62,13 +62,13 @@ function Draw() {
     { photo: ["../../../images/abc18.png"] },
     { photo: ["../../../images/abc19.png"] },
     { photo: ["../../../images/abc20.png"] },
-    { photo: ["../../../images/abc21.png"] },
-    { photo: ["../../../images/abc22.png"] },
-    { photo: ["../../../images/abc23.png"] },
-    { photo: ["../../../images/abc24.png"] },
-    { photo: ["../../../images/abc25.png"] },
-    { photo: ["../../../images/abc26.png"] },
-    { photo: ["../../../images/abc27.png"] },
+    { photo: ["../../../images/LetraT.PNG"] },
+    { photo: ["../../../images/letrau.PNG"] },
+    { photo: ["../../../images/letraV.PNG"] },
+    { photo: ["../../../images/letraw.PNG"] },
+    { photo: ["../../../images/letrax.PNG"] },
+    { photo: ["../../../images/letray.PNG"] },
+    { photo: ["../../../images/letraz.PNG"] },
   ];
 
   return (
