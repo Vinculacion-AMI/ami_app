@@ -89,7 +89,7 @@ function Login(props) {
       alert("Registrate por favor");
     } else {
       let data = { email, password };
-      let result = await fetch( "http://localhost:4000/login", {
+      let result = await fetch( process.env.REACT_APP_BACKEND + "/login", {
         method: "POST",
         body: JSON.stringify(data), 
         headers: {
