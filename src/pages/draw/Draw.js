@@ -54,7 +54,7 @@ function Draw() {
     { photo: ["../../../images/letraK.png"] },
     { photo: ["../../../images/letraL.png"] },
     { photo: ["../../../images/letraLl.png"] },
-    { photo: ["../../../images/m.png"] },
+    { photo: ["../../../images/letram.png"] },
     { photo: ["../../../images/letran.png"] },
     { photo: ["../../../images/letrañ.png"] },
     { photo: ["../../../images/letrao.png"] },
