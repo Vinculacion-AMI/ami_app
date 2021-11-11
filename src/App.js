@@ -4,8 +4,7 @@ import { Grid, TextField, Button, Card, Container } from "@material-ui/core";
 import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Swal from "sweetalert2";
-import axios from 'axios';
+import Swal from "sweetalert2"
 
 
 //Componentes Juegos

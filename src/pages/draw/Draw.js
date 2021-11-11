@@ -41,7 +41,14 @@ function Draw() {
   const heightResponsive = window.innerHeight < 45 ? 450 : 350;
 
   const img = [
-    { photo: ["../../../images/letraA.jpeg"] },
+    { photo: ["../../../images/0001.jpg"] },
+    { photo: ["../../../images/letra a-1.png"] },
+    { photo: ["../../../images/letra b.png"] },
+    { photo: ["../../../images/Letra b-1.png"] },
+    { photo: ["../../../images/Letra c.png"] },
+    { photo: ["../../../images/Letra c-1.png"] },
+    { photo: ["../../../images/Letra d.png"] },
+    { photo: ["../../../images/Letra d-1.png"] },
     { photo: ["../../../images/letraB.jpeg"] },
     { photo: ["../../../images/letraC.jpeg"] },
     { photo: ["../../../images/letraD.jpeg"] },
