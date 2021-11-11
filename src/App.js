@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import Swal from "sweetalert2";
+import axios from 'axios';
 
 
 //Componentes Juegos
@@ -88,9 +89,9 @@ function Login(props) {
       alert("Registrate por favor");
     } else {
       let data = { email, password };
-      let result = await fetch(process.env.REACT_APP_BACKEND + "/login", {
+      let result = await fetch( process.env.REACT_APP_BACKEND + "/login", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(data), 
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
