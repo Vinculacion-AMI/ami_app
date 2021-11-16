@@ -48,7 +48,7 @@ function Levels({ logout, ...rest }) {
     history.push("/puzzle");
   };
   const syllables = () => {
-    history.push("/syllables");
+    history.push("/MonoSyllables");
   };
   const puzzleInit = () => {
     history.push("/puzzleInit");

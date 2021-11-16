@@ -17,6 +17,7 @@ import Draw5 from "./pages/draw/Draw5";
 import JigSaw from "./pages/draggable/Jigsaw";
 import JigSawInit from "./pages/draggableFist/JigsawInit";
 import Syllables from "./pages/syllables/syllables";
+import MonoSyllables from "./pages/Monosyllables/monosyllables";
 import LearnSyllabes from "./pages/Learn/LearnSyllabes";
 
 // Componentes de gestion/visualizacion
@@ -235,6 +236,7 @@ function App() {
           <SecuredRoute path="/draw5" component={Draw5} />
           <SecuredRoute path="/game1" component={Game1} />
           <SecuredRoute path="/syllables" component={Syllables} />
+          <SecuredRoute path="/Monosyllables" component={MonoSyllables} />
           <SecuredRoute path="/puzzle" component={JigSaw} />
           <SecuredRoute path="/puzzleInit" component={JigSawInit} />
           <SecuredRoute path="/puntajes" component={Puntajes} />
