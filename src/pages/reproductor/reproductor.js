@@ -6,8 +6,15 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import AppNavBar from "../../components/navbar";
 
+import { useHistory } from "react-router-dom";
 
-function reproductor(){
+
+function Reproductor(){
+  let history = useHistory();
+  const syllables = () => {
+    history.push("/syllables");
+  };
+  
   return  (
     <div>
       <div style={{ backgroundColor: "#6495ED", height: "13x  0vh" }}>
@@ -22,15 +29,17 @@ function reproductor(){
         <ReactPlayer controls url='https://www.youtube.com/watch?v=bq6Ek-BYOhY&t=16s'></ReactPlayer>
       </div>
       <Button
-      variant="contained"
+        onClick={syllables}
+        variant="contained"
         color="secondary"
         style={{ borderRadius: 50 }}>
           Vamos a practicar
-        </Button></> 
+        </Button>
+        </> 
     </div>
     </div>
   );
   
 }
 
-export default reproductor;
+export default Reproductor;
