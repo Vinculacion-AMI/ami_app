@@ -18,6 +18,9 @@ import JigSaw from "./pages/draggable/Jigsaw";
 import JigSawInit from "./pages/draggableFist/JigsawInit";
 import Syllables from "./pages/syllables/syllables";
 import LearnSyllabes from "./pages/Learn/LearnSyllabes";
+import Reproductor from "./pages/reproductor/reproductor";
+
+
 
 // Componentes de gestion/visualizacion
 import Puntajes from "./pages/puntajes";
@@ -225,6 +228,7 @@ function App() {
         <div>
           <Route path="/" exact component={Login} />
           <SecuredRoute path="/signup" component={Registro} />
+          <SecuredRoute path="/reproductor" component={Reproductor} />
           <SecuredRoute path="/resetpassword" component={ResetPassoword} />
           <SecuredRoute path="/home" component={Home} />
           <SecuredRoute path="/levels" component={Levels} />
