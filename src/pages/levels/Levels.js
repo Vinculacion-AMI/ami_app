@@ -47,8 +47,8 @@ function Levels({ logout, ...rest }) {
   const puzzle = () => {
     history.push("/puzzle");
   };
-  const Monosyllables = () => {
-    history.push("/Monosyllables");
+  const reproductor = () => {
+    history.push("/reproductor");
   };
   const puzzleInit = () => {
     history.push("/puzzleInit");
@@ -257,7 +257,7 @@ function Levels({ logout, ...rest }) {
                     </Typography>
                     <br />
                     <Button
-                      onClick={Monosyllables}
+                      onClick={reproductor}
                       variant="contained"
                       color="primary"
                       style={{ borderRadius: 20 }}

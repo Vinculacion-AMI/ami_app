@@ -11,8 +11,8 @@ import { useHistory } from "react-router-dom";
 
 function Reproductor(){
   let history = useHistory();
-  const syllables = () => {
-    history.push("/syllables");
+  const Monosyllables = () => {
+    history.push("/Monosyllables");
   };
   
   return  (
@@ -29,7 +29,7 @@ function Reproductor(){
         <ReactPlayer controls url='https://www.youtube.com/watch?v=bq6Ek-BYOhY&t=16s'></ReactPlayer>
       </div>
       <Button
-        onClick={syllables}
+        onClick={Monosyllables}
         variant="contained"
         color="secondary"
         style={{ borderRadius: 50 }}>
