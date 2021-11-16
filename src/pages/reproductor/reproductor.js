@@ -7,33 +7,40 @@ import Typography from "@material-ui/core/Typography";
 import AppNavBar from "../../components/navbar";
 
 import { useHistory } from "react-router-dom";
+import { useStyles } from "../syllables/style";
+
 
 
 function Reproductor(){
   let history = useHistory();
-  const Monosyllables = () => {
-    history.push("/Monosyllables");
+  
+  const syllables = () => {
+    history.push("/syllables");
   };
+  const classes = useStyles();
   
   return  (
     <div>
-      <div style={{ backgroundColor: "#6495ED", height: "13x  0vh" }}>
+      <div style={{ backgroundColor: "#6495ED", height: "13x  0vh", textAlign: "center"}}>
         <AppNavBar />
     <>
+    <br></br>
     <CardContent>
-      <Typography gutterBottom variant="h3" component="h1">
-        Vamos a aprender las monosilabas
+      <Typography  className={classes.titleWord}>
+        Vamos a aprender las monosílabas
       </Typography>
-      
+
     </CardContent><div className="reproductor">
-        <ReactPlayer controls url='https://www.youtube.com/watch?v=bq6Ek-BYOhY&t=16s'></ReactPlayer>
+        <ReactPlayer controls url='https://www.youtube.com/watch?v=bO23pUTXyA4&t=8s&ab_channel=lunacreciente'></ReactPlayer>
       </div>
+      <br></br>
       <Button
-        onClick={Monosyllables}
+        onClick={syllables}
         variant="contained"
         color="secondary"
-        style={{ borderRadius: 50 }}>
-          Vamos a practicar
+        style={{ borderRadius: 50 }}
+        className={classes.buttonCheck}>
+          ¡Ahora a practicar!
         </Button>
         </> 
     </div>
