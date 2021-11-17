@@ -10,7 +10,7 @@ const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = ["ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"];
+const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley","Flor","Flan","Ver","Sol","Diez"];
 const wordsx = ["AEIOU", "DA", "DE"];
 
 const JigSawInit = () => {
