@@ -6,11 +6,25 @@ import useForceUpdate from "use-force-update";
 import { Typography } from "@material-ui/core";
 import AppNavBar from '../../components/navbar'
 
+
 const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = ['AVIÓN','ÁRBOL','ABEJA',
+const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley" ,"Flor","Flan","Ver","Sol","Diez"];
+const img = [
+  { photo: ["../../../images/ley.png",] },
+  { photo: ["../../../images/flor.png"] },
+  { photo: ["../../../images/flan.png"] },
+  { photo: ["../../../images/ver.png"] },
+  { photo: ["../../../images/sol.png"] },
+  { photo: ["../../../images/diez.png"] },
+];
+
+
+
+  
+/* //const words = ['AVIÓN','ÁRBOL','ABEJA',
   'BALÓN','BARCO','CASA','CONEJO',
   'DADO','DIENTE','CHOCOLATE','ESPEJO',
   'ESCALERA','FRESA','FUEGO','JOYA','JARRA',
@@ -19,8 +33,8 @@ const words = ['AVIÓN','ÁRBOL','ABEJA',
   'MANO','MAPA','PERA','PEZ','NAVE','NIÑO',
   'QUESO','QUÍMICA','RAMA','RANA','UÑA','UVA',
   'SANDIA','SILLA','VACA','VELA','TAZA','TIGRE',
-  'YATE','YUNQUE'
-];
+  'YATE','YUNQUE'// */
+//];
 const Monosyllables = () => {
   const [word, setWord] = useState(false),
     [arrayWord, setArrayWord] = useState([]),
@@ -129,7 +143,11 @@ const Monosyllables = () => {
                   variant="h3"
                   component="h3"
                   className={classes.titleWord}
+                  
                 >
+
+        
+        
                   {`Forma la siguiente palabra "${word}"`}
                 </Typography>
               </form>
@@ -145,6 +163,7 @@ const Monosyllables = () => {
                 <TransitionsSnackbar ref={childRef} />
               </div>
             }
+
           </div>
         </>
       );

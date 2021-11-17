@@ -6,11 +6,14 @@ import useForceUpdate from "use-force-update";
 import { Typography } from "@material-ui/core";
 import AppNavBar from "../../components/navbar";
 
+
 const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
 const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley","Flor","Flan","Ver","Sol","Diez"];
+
+
 const wordsx = ["AEIOU", "DA", "DE"];
 
 const JigSawInit = () => {
