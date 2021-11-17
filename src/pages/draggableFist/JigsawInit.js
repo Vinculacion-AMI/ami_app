@@ -11,7 +11,7 @@ const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley","Flor","Flan","Ver","Sol","Diez"];
+const words = ["ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" ];
 
 
 const wordsx = ["AEIOU", "DA", "DE"];
