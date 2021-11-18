@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import DraggablePiece from "../draggable/DraggablePiece";
+import DraggablePiece from "../Monosyllables/DraggablePiece";
 import { useStyles } from "./style";
 import TransitionsSnackbar from "../dialogNotifications/notification";
 import useForceUpdate from "use-force-update";
@@ -130,7 +130,7 @@ const Monosyllables = () => {
                   component="h3"
                   className={classes.titleWord}
                 >
-                  {`Forma la siguiente palabra "${word}"`}
+                  {`Forma la siguiente palabra Monosilaba correctamente  "${word}"`}
                 </Typography>
               </form>
             </div>

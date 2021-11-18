@@ -15,7 +15,7 @@ function Reproductor(){
   let history = useHistory();
   
   const syllables = () => {
-    history.push("/syllables");
+    history.push("/Monosyllables");
   };
   const classes = useStyles();
   
