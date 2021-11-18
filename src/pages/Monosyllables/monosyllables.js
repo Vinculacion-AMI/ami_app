@@ -5,12 +5,19 @@ import TransitionsSnackbar from "../dialogNotifications/notification";
 import useForceUpdate from "use-force-update";
 import { Typography } from "@material-ui/core";
 import AppNavBar from '../../components/navbar'
-
+import { useHistory } from "react-router-dom";
+import {Grid} from '@material-ui/core'
+import { Card } from "@material-ui/core";
+import { Carousel } from "react-responsive-carousel";
+import { CardMedia } from "@material-ui/core";
 const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = ['AVIÓN','ÁRBOL','ABEJA',
+const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley" ,"Flor","Flan","Ver","Sol","Diez"];
+
+  
+/* //const words = ['AVIÓN','ÁRBOL','ABEJA',
   'BALÓN','BARCO','CASA','CONEJO',
   'DADO','DIENTE','CHOCOLATE','ESPEJO',
   'ESCALERA','FRESA','FUEGO','JOYA','JARRA',
@@ -19,15 +26,24 @@ const words = ['AVIÓN','ÁRBOL','ABEJA',
   'MANO','MAPA','PERA','PEZ','NAVE','NIÑO',
   'QUESO','QUÍMICA','RAMA','RANA','UÑA','UVA',
   'SANDIA','SILLA','VACA','VELA','TAZA','TIGRE',
-  'YATE','YUNQUE'
-];
+  'YATE','YUNQUE'// */
+//];
 const Monosyllables = () => {
   const [word, setWord] = useState(false),
     [arrayWord, setArrayWord] = useState([]),
     [currentLevel, setCurrentLevel] = useState(false),
     [levels, setlevels] = useState([]),
     [changeLvl, setchangeLvl] = useState(false);
-
+    const history = useHistory();
+    const img = [
+      { photo: ["../../../images/ley.png",] },
+      { photo: ["../../../images/flor.png"] },
+      { photo: ["../../../images/flan.png"] },
+      { photo: ["../../../images/ver.png"] },
+      { photo: ["../../../images/sol.png"] },
+      { photo: ["../../../images/diez.png"] },
+    ];
+  
   useEffect(() => {
     getClevel();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -84,6 +100,7 @@ const Monosyllables = () => {
     let changeLvlvar = "nivel" + i;
     httpGetProvin.currentLvl = changeLvlvar;
     getClevel(changeLvlvar);
+    history.push("/Monosyllables");
     forceUpdate();
   };
 
@@ -123,12 +140,14 @@ const Monosyllables = () => {
         <>
           <div style={{ backgroundColor: "#6495ED", minheight: "100vh" }}>
             <AppNavBar />
+         
             <div className={classes.root}>
               <form noValidate autoComplete="off">
                 <Typography
                   variant="h3"
                   component="h3"
                   className={classes.titleWord}
+                  
                 >
                   {`Forma la siguiente palabra Monosilaba correctamente  "${word}"`}
                 </Typography>
@@ -145,6 +164,22 @@ const Monosyllables = () => {
                 <TransitionsSnackbar ref={childRef} />
               </div>
             }
+             <Grid
+          style={{ textAlign: "center", alignItems: "center" }}
+          xs={12}
+          sm={6}
+        >
+          <Grid style={{ margin: 25, position: "relative" }}>
+            <Carousel emulateTouch={true}>
+              {img.map((e) => {
+                  <Card className={classes.root}>
+                    <CardMedia className={classes.media} image={e.photo} />
+                  </Card>
+              })}
+            </Carousel>
+          </Grid>
+        </Grid>
+       
           </div>
         </>
       );

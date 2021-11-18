@@ -44,6 +44,9 @@ function Levels({ logout, ...rest }) {
   const learn = () => {
     history.push("/learnSyllabes");
   };
+  const syllables = () => {
+    history.push("/syllables");
+  };
   const puzzle = () => {
     history.push("/puzzle");
   };
@@ -242,11 +245,38 @@ function Levels({ logout, ...rest }) {
                 <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
-                    image="../../images/menu/silabas.png"
+                    image="../../images/menu/monosilabos.jpg"            
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Identifica las sílabas
+                      Identifica las palabras Monosílabas 
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Deberas reconocer las palabras monosílabas
+                    </Typography>
+                    <br />
+                    <Button
+                      onClick={reproductor}
+                      variant="contained"
+                      color="primary"
+                      style={{ borderRadius: 20 }}
+                    >
+                      Jugar
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="../../images/menu/silabas.png"            
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Identifica las palabras Monosílabas y bisílabas 
                     </Typography>
                     <Typography
                       variant="body2"
@@ -257,7 +287,7 @@ function Levels({ logout, ...rest }) {
                     </Typography>
                     <br />
                     <Button
-                      onClick={reproductor}
+                      onClick={syllables}
                       variant="contained"
                       color="primary"
                       style={{ borderRadius: 20 }}
