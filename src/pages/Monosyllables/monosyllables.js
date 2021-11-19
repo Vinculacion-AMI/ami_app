@@ -169,7 +169,7 @@ const Monosyllables = () => {
           xs={12}
           sm={6}
         >
-          <Grid style={{ margin: 25, position: "relative" }}>
+          /* // <Grid style={{ margin: 25, position: "relative" }}> //
             <Carousel emulateTouch={true}>
               {img.map((e) => {
                   <Card className={classes.root}>
@@ -177,7 +177,7 @@ const Monosyllables = () => {
                   </Card>
               })}
             </Carousel>
-          </Grid>
+          </Grid> // */
         </Grid>
        
           </div>
