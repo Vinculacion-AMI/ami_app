@@ -164,6 +164,7 @@ const Monosyllables = () => {
                 <TransitionsSnackbar ref={childRef} />
               </div>
             }
+ {
              <Grid
           style={{ textAlign: "center", alignItems: "center" }}
           xs={12}
@@ -178,7 +179,7 @@ const Monosyllables = () => {
               })}
             </Carousel>
           </Grid>
-        </Grid>
+        </Grid> } 
        
           </div>
         </>
