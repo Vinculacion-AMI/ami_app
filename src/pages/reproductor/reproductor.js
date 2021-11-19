@@ -37,15 +37,15 @@ function Reproductor(){
       
       >
         
-        <Container fixed>
-          <Grid spacing={2} container>
+        <Container fixed > 
+          <Grid spacing={2} container >
             <Grid item md={3} xs={1}></Grid>
-            <Grid align="center" item xs={20} md={54} sm={12}>
-              <Carousel dynamicHeight={true} emulateTouch={true}>
-                <Card boxShadow={3} className={classes.root}>
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                    <div className="reproductor">
+            <Grid align="center" item xs={10} md={20} sm={12} >
+              <Carousel dynamicHeight={true} emulateTouch={true} >
+                <Card boxShadow={6} className={classes.root} >
+                  <CardContent style={{  backgroundColor: "#6495ED"}}>
+                    <Typography gutterBottom variant="h5" component="h2" >
+                    <div className="reproductor" >
                        <ReactPlayer controls url='https://www.youtube.com/watch?v=TyOWmMUsJYU'></ReactPlayer>
                      </div>
       <Button
@@ -60,7 +60,7 @@ function Reproductor(){
                   </CardContent>
                 </Card>
                 <Card className={classes.root}>
-                  <CardContent>
+                  <CardContent style={{  backgroundColor: "#6495ED"}}>
                     <Typography gutterBottom variant="h5" component="h2">
                     <div className="reproductor">
                       <ReactPlayer controls url='https://www.youtube.com/watch?v=-sHbCdJ1xw8'></ReactPlayer>
@@ -77,7 +77,7 @@ function Reproductor(){
                   </CardContent>
                 </Card>
                 <Card className={classes.root}>
-                  <CardContent>
+                  <CardContent style={{  backgroundColor: "#6495ED"}}>
                     <Typography gutterBottom variant="h5" component="h2">
                     <div className="reproductor">
                       <ReactPlayer controls url='https://www.youtube.com/watch?v=bO23pUTXyA4&t=8s&ab_channel=lunacreciente'></ReactPlayer>
