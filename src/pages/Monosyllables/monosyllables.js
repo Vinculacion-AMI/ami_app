@@ -164,23 +164,7 @@ const Monosyllables = () => {
                 <TransitionsSnackbar ref={childRef} />
               </div>
             }
- {
-             <Grid
-          style={{ textAlign: "center", alignItems: "center" }}
-          xs={12}
-          sm={6}
-        >
-          <Grid style={{ margin: 25, position: "relative" }}>
-            <Carousel emulateTouch={true}>
-              {img.map((e) => {
-                  <Card className={classes.root}>
-                    <CardMedia className={classes.media} image={e.photo} />
-                  </Card>
-              })}
-            </Carousel>
-          </Grid>
-        </Grid> } 
-       
+
           </div>
         </>
       );
