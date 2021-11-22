@@ -3,52 +3,62 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { useStyles } from "./style1";
+import { useStyles } from "./style";
 import useForceUpdate from "use-force-update";
-import { Button } from "@material-ui/core";
 import Zoom from "@material-ui/core/Zoom";
-import { useHistory } from "react-router-dom";
+//Function
+import getDataUser from "../../util/get";
+
 export default function DraggablePiece(props) {
   const [textContent, setTextContent] = useState(Array),
     [stateArrayItems, setStateArrayItems] = useState(Array),
     [puzzleSolve, setPuzzleSolve] = useState(Array);
   const classes = useStyles();
-  const history = useHistory();
+  const wordsxx = ["AEIOU", "DA", "DE"];
   useEffect(() => {
     begingComponents();
     forceUpdate();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  const getData = async () => {
+    const user = localStorage.getItem("user_id");
+    const url = process.env.REACT_APP_BACKEND + "/stage/" + user + "/vocablo";
+    await getDataUser(url).then((response) => {
+      // const currentSubLvl = response[0].sub_level;
+      // const currentLvl = response[0].level;
+    });
+  };
   const forceUpdate = useForceUpdate();
   const shuffle = (array) => {
     const mix = array.sort(() => Math.random() - 0.5);
     return mix;
   };
-
   const begingComponents = () => {
     const word = props.arrayWord;
     setTextContent(shuffle(word));
+
     setStateArrayItems(new Array(props.arrayWord.length));
     setPuzzleSolve(new Array(props.arrayWord.length));
   };
-
   const fixWord = (a, b) => {
     if (a && b && a !== undefined && b !== undefined && b[0] !== undefined) {
+      let worldtest = "";
       let option1 = [];
       let option2 = [];
       a.forEach((element) => {
         option1.push(element[0]);
       });
+
       b.forEach((element) => {
         if (element !== undefined || element) {
           option2.push(element[0]);
+          worldtest += element[0];
         }
       });
-      if (
-        option1.length === option2.length &&
-        JSON.stringify(option1) === JSON.stringify(option2)
-      ) {
+      getData();
+      var found = wordsxx.includes(worldtest.toString());
+
+      if (found) {
         return true;
       } else {
         return false;
@@ -67,20 +77,12 @@ export default function DraggablePiece(props) {
     fixWord(solv, puzzleSolve)
       ? props.switchAnswer("correct")
       : props.switchAnswer("wrong");
-
-    history.push("/Monosyllables");
-    };
-
+  };
   const previousLevel = () => {
     props.previousLevel();
   };
-
   const setText = (item, state) => {
     let arrayUpdated = stateArrayItems;
-    let i = textContent.indexOf(item);
-    arrayUpdated[i] === undefined
-      ? (arrayUpdated[i] = false)
-      : (arrayUpdated[i] = undefined);
     if (state) {
       for (let index = 0; index < arrayUpdated.length; index++) {
         let arrayPuzzleSolve = puzzleSolve;
@@ -97,6 +99,7 @@ export default function DraggablePiece(props) {
         if (arrayPuzzleDisolve[index] === item) {
           arrayPuzzleDisolve[index] = undefined;
           setPuzzleSolve(arrayPuzzleDisolve);
+
           break;
         }
       }
@@ -108,14 +111,14 @@ export default function DraggablePiece(props) {
   if (textContent && stateArrayItems) {
     let ikey = 0;
     return (
-      <div>
+      <div style={{ backgroundColor: "#6495ED", height: "100vh" }}>
         <Grid container className={classes.rootGrid}>
           <Grid item xs={12}>
             <Grid container justify="center">
               {puzzleSolve.map((content) => {
                 ikey += 1;
                 return (
-                  <Grid key={ikey} item>
+                  <Grid style={{ backgroundColor: "#6495ED" }} key={ikey} item>
                     <Zoom in={content !== undefined}>
                       <Card className={classes.rootEmptyCard}>
                         {content === undefined ? null : (
@@ -140,7 +143,7 @@ export default function DraggablePiece(props) {
                 return (
                   <Grid key={ikey} item>
                     <Zoom in={stateArrayItems[i] === undefined}>
-                      <Card className={classes.rootCard}>
+                      <Card className={classes.rootEmptyCard}>
                         {stateArrayItems[i] !== undefined ? null : (
                           <CardContent onClick={() => setText(content, true)}>
                             <Typography className={classes.title}>
@@ -155,29 +158,6 @@ export default function DraggablePiece(props) {
                   </Grid>
                 );
               })}
-            </Grid>
-            <Grid container justify="center">
-              <Grid item>
-                <Button
-                  disabled={!puzzleSolve[0]}
-                  onClick={finalSolve}
-                  variant="contained"
-                  size="large"
-                  className={classes.buttonCheck}
-                >
-                  Siguiente
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button
-                  onClick={previousLevel}
-                  variant="contained"
-                  size="large"
-                  className={classes.buttonCheck}
-                >
-                  Anterior
-                </Button>
-              </Grid>
             </Grid>
           </Grid>
         </Grid>

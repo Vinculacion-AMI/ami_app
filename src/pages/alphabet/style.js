@@ -1,75 +1,84 @@
-import Color from "color";
 import { makeStyles } from "@material-ui/core/styles";
-// let colors = [
-//   "#FFC300",
-//   "#2ECC71",
-//   "#BEE37B",
-//   "#FF5733",
-//   "#884EA0",
-//   "#3498DB",
-//   "#2980B9",
-// ];
-
-export const useGridStyles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(0.5),
-    width: "95%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-}));
-
+let colors = [
+  "#FF5733",
+  "#FFBE33",
+  "#56CA2D",
+  "#BD57B8",
+  "#45526c",
+  "#325288",
+  "#77acf1",
+  "#1459E8",
+  "#E13D49",
+  "#B3888C",
+  "#7B219F",
+];
+// let titleColor = colors[Math.floor(Math.random() * colors.length)];
+let color1 = colors[Math.floor(Math.random() * colors.length)];
+let color2 = colors[Math.floor(Math.random() * colors.length)];
 export const useStyles = makeStyles((theme) => ({
-  titleWord: {
+  button: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     color: "white",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+  },
+  root: {
+    margin: theme.spacing(1),
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  form: {
+    "& > *": {
+      margin: theme.spacing(1),
+      width: "25ch",
+    },
+  },
+  rootEmptyCard: {
+    // margin: theme.spacing(2),
+    maxWidth: "50%",
+    maxHeight: "60%",
+    minHeight: "60%",
+    minWidth: "90%",
+    background: `linear-gradient(45deg, ${color1} 40%, ${color2} 50%)`,
 
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  title: {
+    fontSize: 80,
+    color: "#FFFFFF",
+  },
+  titleWord: {
+    color: "#FFFFFF",
     [theme.breakpoints.down("sm")]: {
-      fontSize: 15,
+      fontSize: 20,
     },
     [theme.breakpoints.up("md")]: {
       fontSize: 30,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: 30,
+      fontSize: 40,
     },
   },
-  actionArea: {
-    borderRadius: 14,
-    transition: "0.3s",
-    "&:hover": {
-      transform: "scale(1.1)",
-    },
+  rootGrid: {
+    //flexGrow: 1,
+    textAlign: "center",
+    height: window.screen.width,
   },
-  card: ({ color }) => ({
-    borderRadius: 14,
-    boxShadow: "none",
 
-    "&:hover": {
-      boxShadow: `0 6px 12px 0 ${Color(color)
-        .rotate(-12)
-        .darken(0.2)
-        .fade(0.5)}`,
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      minWidth: window.screen.width / 4,
-    },
-    [theme.breakpoints.up("md")]: {
-      minWidth: window.screen.width / 4,
-    },
-    [theme.breakpoints.up("lg")]: {
-      minWidth: window.screen.width / 5,
-      maxWidth: "100%",
-    },
-  }),
+  control: {
+    padding: theme.spacing(2),
+  },
   buttonCheck: {
     // color:'#ffffff' ,
-    margin: theme.spacing(2),
-    backgroundColor: "#F3F3F3",
+    margin: theme.spacing(5),
+    backgroundColor: "#2ECC71 ",
     background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)",
     color: "white",
     boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .3)",
@@ -77,72 +86,10 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: 10,
+      fontSize: 30,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: 20,
+      fontSize: 40,
     },
-  },
-  cardMinSize: ({ color }) => ({
-    borderRadius: 14,
-    boxShadow: "none",
-
-    "&:hover": {
-      boxShadow: `0 6px 12px 0 ${Color(color)
-        .rotate(-12)
-        .darken(0.2)
-        .fade(0.5)}`,
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      minWidth: window.screen.width / 4,
-    },
-    [theme.breakpoints.up("md")]: {
-      minWidth: window.screen.width / 4,
-    },
-    [theme.breakpoints.up("lg")]: {
-      minWidth: window.screen.width / 5,
-      maxWidth: "100%",
-    },
-  }),
-  content: ({ color }) => {
-    return {
-      backgroundColor: color,
-
-      [theme.breakpoints.down("sm")]: {
-        padding: "0.8rem 1rem 1rem",
-      },
-      [theme.breakpoints.up("md")]: {
-        padding: "1rem 1.5rem 1.5rem",
-      },
-      [theme.breakpoints.up("lg")]: {
-        padding: "1rem 1.5rem 1.5rem",
-      },
-    };
-  },
-  titleCard: {
-    fontFamily: "Montserrat, sans-serif",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1rem",
-    },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1.5rem",
-    },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "2rem",
-    },
-    color: "#fff",
-    textTransform: "uppercase",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    fontFamily: "Keania One",
-    color: "#fff",
-    textTransform: "uppercase",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
 }));
