@@ -145,7 +145,7 @@ const Monosyllables = () => {
                   className={classes.titleWord}
                   
                 >
-                  {`Forma la siguiente palabra Monosilaba correctamente  "${word}"`}
+                  {`Forma la siguiente palabra Monosílaba correctamente  "${word}"`}
                 </Typography>
               </form>
             </div>
