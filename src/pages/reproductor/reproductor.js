@@ -85,7 +85,7 @@ function Reproductor() {
         color="secondary"
         style={{ borderRadius: 50 }}
         className={classes.buttonCheck}>
-        ¡Ahora a practicar!
+        ¡Ordena la Palabra Monosílaba!
       </Button>
       <Button
         onClick={alpha}
@@ -93,7 +93,7 @@ function Reproductor() {
         color="secondary"
         style={{ borderRadius: 50 }}
         className={classes.buttonCheck}>
-        ¡Forma una Palabra!
+        ¡Forma una Palabra Monosílaba!
       </Button>
     </div>
   );
