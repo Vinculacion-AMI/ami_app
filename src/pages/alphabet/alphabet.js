@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import DraggablePiece from "../Monosyllables/DraggablePiece";
+import DraggablePiece from "./DraggablePiece";
 import { useStyles } from "./style";
 import TransitionsSnackbar from "../dialogNotifications/notification";
 import useForceUpdate from "use-force-update";
@@ -10,36 +10,15 @@ const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = [/* "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" */ "Ley" ,"Flor","Flan","Ver","Sol","Diez"];
+const words = ["ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" ];
 
-  
-/* //const words = ['AVIÓN','ÁRBOL','ABEJA',
-  'BALÓN','BARCO','CASA','CONEJO',
-  'DADO','DIENTE','CHOCOLATE','ESPEJO',
-  'ESCALERA','FRESA','FUEGO','JOYA','JARRA',
-  'GATO','GUANTE','KIWI','KARATE','ISLA','IGLU',
-  'LLAVE','LLAMA','LÁPIZ','LIMÓN','OSO','OJO',
-  'MANO','MAPA','PERA','PEZ','NAVE','NIÑO',
-  'QUESO','QUÍMICA','RAMA','RANA','UÑA','UVA',
-  'SANDIA','SILLA','VACA','VELA','TAZA','TIGRE',
-  'YATE','YUNQUE'// */
-//];
-const Monosyllables = () => {
+const Alphabet = () => {
   const [word, setWord] = useState(false),
     [arrayWord, setArrayWord] = useState([]),
     [currentLevel, setCurrentLevel] = useState(false),
     [levels, setlevels] = useState([]),
     [changeLvl, setchangeLvl] = useState(false);
-    const history = useHistory();
-    const img = [
-      { photo: ["../../../images/ley.png",] },
-      { photo: ["../../../images/flor.png"] },
-      { photo: ["../../../images/flan.png"] },
-      { photo: ["../../../images/ver.png"] },
-      { photo: ["../../../images/sol.png"] },
-      { photo: ["../../../images/diez.png"] },
-    ];
-  
+    const history = useHistory();  
   useEffect(() => {
     getClevel();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -96,7 +75,7 @@ const Monosyllables = () => {
     let changeLvlvar = "nivel" + i;
     httpGetProvin.currentLvl = changeLvlvar;
     getClevel(changeLvlvar);
-    history.push("/Monosyllables");
+
     forceUpdate();
   };
 
@@ -168,4 +147,4 @@ const Monosyllables = () => {
   };
   return <>{DragabbleComponent()}</>;
 }
-export default React.forwardRef(Monosyllables);
+export default React.forwardRef(Alphabet);
