@@ -10,7 +10,7 @@ const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = ["ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" ];
+const words = ["QWERTYUIOPASDFGHJKLÑZXCVBNM" ];
 
 const Alphabet = () => {
   const [word, setWord] = useState(false),
@@ -124,7 +124,7 @@ const Alphabet = () => {
                   className={classes.titleWord}
                   
                 >
-                  {`Forma la siguiente palabra Monosilaba correctamente  "${word}"`}
+                  {`Forma una palabra monosílaba`}
                 </Typography>
               </form>
             </div>
