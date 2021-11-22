@@ -15,89 +15,86 @@ import { useStyles } from "../syllables/style";
 
 
 
-function Reproductor(){
+function Reproductor() {
   let history = useHistory();
-  
+
   const syllables = () => {
     history.push("/Monosyllables");
   };
+  const alpha = () => {
+    history.push("alphabet");
+  };
   const classes = useStyles();
-  
-  return  (
-    <div style={{  backgroundColor: "#6495ED", height: "13x  0vh", textAlign: "center"}}>
+
+  return (
+    <div style={{ backgroundColor: "#6495ED", height: "13x  0vh", textAlign: "center" }}>
       <AppNavBar />
       <br></br>
       <br></br>
       <CardContent>
-      <Typography  className={classes.titleWord}>
-        Vamos a aprender las monosílabas
-      </Typography>
-    </CardContent>
+        <Typography className={classes.titleWord}>
+          Vamos a aprender las monosílabas
+        </Typography>
+      </CardContent>
       <Grid
-      
+
       >
-        
-        <Container fixed > 
+
+        <Container fixed >
           <Grid spacing={2} container >
             <Grid item md={3} xs={1}></Grid>
             <Grid align="center" item xs={10} md={20} sm={12} >
               <Carousel dynamicHeight={true} emulateTouch={true} >
                 <Card boxShadow={6} className={classes.root} >
-                  <CardContent style={{  backgroundColor: "#6495ED"}}>
+                  <CardContent style={{ backgroundColor: "#6495ED" }}>
                     <Typography gutterBottom variant="h5" component="h2" >
-                    <div className="reproductor" >
-                       <ReactPlayer controls url='https://www.youtube.com/watch?v=TyOWmMUsJYU'></ReactPlayer>
-                     </div>
-      <Button
-        onClick={syllables}
-        variant="contained"
-        color="secondary"
-        style={{ borderRadius: 50 }}
-        className={classes.buttonCheck}>
-          ¡Ahora a practicar!
-        </Button>
+                      <div className="reproductor" >
+                        <ReactPlayer controls url='https://www.youtube.com/watch?v=TyOWmMUsJYU'></ReactPlayer>
+                      </div>
                     </Typography>
                   </CardContent>
                 </Card>
                 <Card className={classes.root}>
-                  <CardContent style={{  backgroundColor: "#6495ED"}}>
+                  <CardContent style={{ backgroundColor: "#6495ED" }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                    <div className="reproductor">
-                      <ReactPlayer controls url='https://www.youtube.com/watch?v=-sHbCdJ1xw8'></ReactPlayer>
-          </div>
-      <Button
-        onClick={syllables}
-        variant="contained"
-        color="secondary"
-        style={{ borderRadius: 50 }}
-        className={classes.buttonCheck}>
-          ¡Ahora a practicar!
-        </Button>
+                      <div className="reproductor">
+                        <ReactPlayer controls url='https://www.youtube.com/watch?v=-sHbCdJ1xw8'></ReactPlayer>
+                      </div>
+
                     </Typography>
                   </CardContent>
                 </Card>
                 <Card className={classes.root}>
-                  <CardContent style={{  backgroundColor: "#6495ED"}}>
+                  <CardContent style={{ backgroundColor: "#6495ED" }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                    <div className="reproductor">
-                      <ReactPlayer controls url='https://www.youtube.com/watch?v=bO23pUTXyA4&t=8s&ab_channel=lunacreciente'></ReactPlayer>
-                   </div>
-      <Button
-        onClick={syllables}
-        variant="contained"
-        color="secondary"
-        style={{ borderRadius: 50 }}
-        className={classes.buttonCheck}>
-          ¡Ahora a practicar!
-        </Button>
+                      <div className="reproductor">
+                        <ReactPlayer controls url='https://www.youtube.com/watch?v=bO23pUTXyA4&t=8s&ab_channel=lunacreciente'></ReactPlayer>
+                      </div>
+
                     </Typography>
-                     </CardContent>
+                  </CardContent>
                 </Card>
-                 </Carousel>
-              </Grid>
+              </Carousel>
+            </Grid>
           </Grid>
         </Container>
       </Grid>
+      <Button
+        onClick={syllables}
+        variant="contained"
+        color="secondary"
+        style={{ borderRadius: 50 }}
+        className={classes.buttonCheck}>
+        ¡Ahora a practicar!
+      </Button>
+      <Button
+        onClick={alpha}
+        variant="contained"
+        color="secondary"
+        style={{ borderRadius: 50 }}
+        className={classes.buttonCheck}>
+        ¡Forma una Palabra!
+      </Button>
     </div>
   );
 }

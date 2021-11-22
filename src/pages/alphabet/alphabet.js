@@ -4,13 +4,17 @@ import { useStyles } from "./style";
 import TransitionsSnackbar from "../dialogNotifications/notification";
 import useForceUpdate from "use-force-update";
 import { Typography } from "@material-ui/core";
-import AppNavBar from '../../components/navbar'
-import { useHistory } from "react-router-dom";
+import AppNavBar from "../../components/navbar";
+
+
 const { List } = require("immutable");
 const httpGetProvin = {
   currentLvl: "nivel1",
 };
-const words = ["QWERTYUIOPASDFGHJKLÑZXCVBNM" ];
+const words = ["ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" ];
+
+
+const wordsx = ["AEIOU", "DA", "DE"];
 
 const Alphabet = () => {
   const [word, setWord] = useState(false),
@@ -18,12 +22,11 @@ const Alphabet = () => {
     [currentLevel, setCurrentLevel] = useState(false),
     [levels, setlevels] = useState([]),
     [changeLvl, setchangeLvl] = useState(false);
-    const history = useHistory();  
+
   useEffect(() => {
     getClevel();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const forceUpdate = useForceUpdate();
   const childRef = useRef();
   const getClevel = (value) => {
@@ -38,28 +41,31 @@ const Alphabet = () => {
       forceUpdate();
     }
   };
-
   const encodeLevels = (item) => {
     let array = [];
     let i = 0;
     let lettersContainer = [];
+    // let lettersOriginal = [];
+
     words.forEach((element) => {
       let i = words.indexOf(element) + 1;
       array.splice(i, 0, "nivel" + i);
     });
-    let lvlWord = words[array.indexOf(item)];
-    console.log(item);
+    let lvlWord = words[0];
+    let lvlWordx = wordsx[i];
+
     Array.from(lvlWord).forEach((element) => {
       lettersContainer.push(element + i);
       i += 1;
     });
+
     lettersContainer = List(lettersContainer)._tail.array;
     setArrayWord(lettersContainer);
-    setWord(lvlWord);
+    setWord(lvlWordx);
     setlevels(array);
   };
-
   const classes = useStyles();
+
   const switchAction = (value) => {
     childRef.current.handleClick(value);
     if (value === "correct" && words[words.length - 1] !== word) {
@@ -78,13 +84,11 @@ const Alphabet = () => {
 
     forceUpdate();
   };
-
   const switchActionPrevLvl = () => {
     if (words[0] !== word) {
       previousLevel();
     }
   };
-
   const previousLevel = () => {
     setTimeout(() => {
       setchangeLvl(true);
@@ -93,11 +97,9 @@ const Alphabet = () => {
     let i = levels.indexOf(currentLevel);
     let changeLvlvar = "nivel" + i;
     httpGetProvin.currentLvl = changeLvlvar;
-    console.log(changeLvlvar);
     getClevel(changeLvlvar);
     forceUpdate();
   };
-  
   const DragabbleComponent = () => {
     if (arrayWord.length === 0 && !currentLevel) {
       <Typography>Loading...</Typography>;
@@ -112,39 +114,32 @@ const Alphabet = () => {
       );
     } else if (!changeLvl) {
       return (
-        <>
-          <div style={{ backgroundColor: "#6495ED", minheight: "100vh" }}>
-            <AppNavBar />
-         
-            <div className={classes.root}>
-              <form noValidate autoComplete="off">
-                <Typography
-                  variant="h3"
-                  component="h3"
-                  className={classes.titleWord}
-                  
-                >
-                  {`Forma una palabra monosílaba`}
-                </Typography>
-              </form>
-            </div>
-
-            <DraggablePiece
-              arrayWord={arrayWord}
-              switchAnswer={switchAction}
-              previousLevel={switchActionPrevLvl}
-            />
-            {
-              <div className={classes.root}>
-                <TransitionsSnackbar ref={childRef} />
-              </div>
-            }
-
+        <div style={{ backgroundColor: "#6495ED" }}>
+          <AppNavBar />
+          <div className={classes.root}>
+            <form noValidate autoComplete="off">
+              <Typography
+                variant="h4"
+                component="h4"
+                className={classes.titleWord}
+              >
+                {`Selecciona las letras para formar una palabra monosílaba`}
+              </Typography>
+            </form>
           </div>
-        </>
+          <DraggablePiece
+            arrayWord={arrayWord}
+            switchAnswer={switchAction}
+            previousLevel={switchActionPrevLvl}
+          />
+          <div className={classes.root}>
+            <TransitionsSnackbar ref={childRef} />
+          </div>
+        </div>
       );
     }
   };
   return <>{DragabbleComponent()}</>;
-}
+};
+
 export default React.forwardRef(Alphabet);
