@@ -33,15 +33,14 @@ function Reproductor() {
           Vamos a aprender las monosílabas
         </Typography>
       </CardContent>
-      <Grid
-
-      >
-
+      <Grid>
         <Container fixed >
                   <CardContent style={{ backgroundColor: "#6495ED" }}>
                     <Typography gutterBottom variant="h5" component="h2" >
                       <div className="reproductor" >
-                        <ReactPlayer controls url='../../../images/Vdeo.mp4'></ReactPlayer>
+                      <video width="750" height="500" controls>
+                          <source src="../../../alphabet-song1.mp4" type="video/mp4" />
+                      </video>                      
                       </div>
                     </Typography>
                   </CardContent>
@@ -69,3 +68,4 @@ function Reproductor() {
 
 
 export default Reproductor;
+
