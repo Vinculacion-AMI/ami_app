@@ -66,7 +66,7 @@ const TransitionsSnackbar = forwardRef((props, ref) => {
             <CardContent>
               <Box className={classes.boxTitle} borderRadius={50}>
                 <Typography className={classes.titleWord}>
-                  Respuesta Correcta!!{" "}
+                  ¡¡Respuesta Correcta!!{" "}
                 </Typography>
               </Box>
               <CheckCircleIcon className={classes.iconSuccess} />

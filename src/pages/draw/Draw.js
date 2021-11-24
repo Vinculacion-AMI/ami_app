@@ -105,7 +105,7 @@ function Draw() {
       <Grid container alignItems="center">
         <Grid container style={{ margin: 8 }} xs={12} sm={12}>
           <Grid style={{ textAlign: "center" }} xs={6} sm={6}>
-            <h2>Replica</h2>
+            <h2>Réplica</h2>
           </Grid>
           <Grid container alignItems="center" xs={6} sm={6}>
             <Grid item xs={12} sm={12}>

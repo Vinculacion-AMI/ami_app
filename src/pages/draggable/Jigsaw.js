@@ -18,7 +18,7 @@ const words = ['AVIÓN','ÁRBOL','ABEJA',
   'LLAVE','LLAMA','LÁPIZ','LIMÓN','OSO','OJO',
   'MANO','MAPA','PERA','PEZ','NAVE','NIÑO',
   'QUESO','QUÍMICA','RAMA','RANA','UÑA','UVA',
-  'SANDIA','SILLA','VACA','VELA','TAZA','TIGRE',
+  'SANDÍA','SILLA','VACA','VELA','TAZA','TIGRE',
   'YATE','YUNQUE'
 ];
 const JigSaw = () => {
