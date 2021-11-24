@@ -54,7 +54,7 @@ function Registro() {
 
   async function signup() {
     if (name === "" || email === "" || password === "") {
-      alert("Registrate por favor");
+      alert("Regístrate por favor");
     } else {
       let data = { name, email, password };
       console.warn(data);
