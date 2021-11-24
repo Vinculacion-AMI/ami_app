@@ -27,6 +27,11 @@ function Game1() {
       { id: 8, name: "Conejo", photo: "../../../images/gameDnD/cone2.jpg" },
       { id: 9, name: "Gallina", photo: "../../../images/gameDnD/gal2.jpg" },
       { id: 10, name: "Caballo", photo: "../../../images/gameDnD/cab2.jpg" },
+      { id: 11, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
+      { id: 12, name: "Leon", photo: "../../../images/gameDnD/leon.jpg" },
+      { id: 13, name: "Cebra", photo: "../../../images/gameDnD/cebrajpg" },
+      { id: 14, name: "jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
+      { id: 15, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
     ];
 
     function generateRandomInt() {
