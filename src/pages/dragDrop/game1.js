@@ -35,7 +35,7 @@ function Game1() {
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (10 - 0) + 0);
+      return Math.floor(Math.random() * (15 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -47,6 +47,11 @@ function Game1() {
       { id: 3, name: "Gato" },
       { id: 4, name: "Gallina" },
       { id: 5, name: "Caballo" },
+      { id: 6, name: "Tortuga" },
+      { id: 7, name: "Leon" },
+      { id: 8, name: "Cebra" },
+      { id: 9, name: "Jirafa" },
+      { id: 10, name: "Hipopotamo" },
     ];
 
   const botones = () => {
@@ -112,7 +117,7 @@ function Game1() {
         setDato1(prueba)
         btnR = botones()
         setContador(contador+1);
-        if(contador === 5) 
+        if(contador === 10) 
         {
           setContador(0);
           
