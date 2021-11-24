@@ -4,7 +4,7 @@ import { Grid, TextField, Button, Card, Container } from "@material-ui/core";
 import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Swal from "sweetalert2";
+import Swal from "sweetalert2"
 
 
 //Componentes Juegos
@@ -17,7 +17,12 @@ import Draw5 from "./pages/draw/Draw5";
 import JigSaw from "./pages/draggable/Jigsaw";
 import JigSawInit from "./pages/draggableFist/JigsawInit";
 import Syllables from "./pages/syllables/syllables";
+import MonoSyllables from "./pages/Monosyllables/monosyllables";
 import LearnSyllabes from "./pages/Learn/LearnSyllabes";
+import Reproductor from "./pages/reproductor/reproductor";
+import alphabet from "./pages/alphabet/alphabet";
+
+
 
 // Componentes de gestion/visualizacion
 import Puntajes from "./pages/puntajes";
@@ -88,9 +93,9 @@ function Login(props) {
       alert("Registrate por favor");
     } else {
       let data = { email, password };
-      let result = await fetch(process.env.REACT_APP_BACKEND + "/login", {
+      let result = await fetch( process.env.REACT_APP_BACKEND + "/login", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify(data), 
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
@@ -114,7 +119,7 @@ function Login(props) {
           if (state.dismiss === Swal.DismissReason.timer || state.isDismissed) {
             localStorage.setItem("token", result.token);
             localStorage.setItem("user_id", result.id);
-            localStorage.setItem("isadmin", result.isAdmin);
+           /*  localStorage.setItem("isadmin", result.isAdmin); */
             authenticate.onAuthentication();
             props.history.push("/home");
           }
@@ -225,6 +230,7 @@ function App() {
         <div>
           <Route path="/" exact component={Login} />
           <SecuredRoute path="/signup" component={Registro} />
+          <SecuredRoute path="/reproductor" component={Reproductor} />
           <SecuredRoute path="/resetpassword" component={ResetPassoword} />
           <SecuredRoute path="/home" component={Home} />
           <SecuredRoute path="/levels" component={Levels} />
@@ -235,6 +241,8 @@ function App() {
           <SecuredRoute path="/draw5" component={Draw5} />
           <SecuredRoute path="/game1" component={Game1} />
           <SecuredRoute path="/syllables" component={Syllables} />
+          <SecuredRoute path="/alphabet" component={alphabet} />
+          <SecuredRoute path="/Monosyllables" component={MonoSyllables} />
           <SecuredRoute path="/puzzle" component={JigSaw} />
           <SecuredRoute path="/puzzleInit" component={JigSawInit} />
           <SecuredRoute path="/puntajes" component={Puntajes} />
