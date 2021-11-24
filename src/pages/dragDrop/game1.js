@@ -28,10 +28,10 @@ function Game1() {
       { id: 9, name: "Gallina", photo: "../../../images/gameDnD/gal2.jpg" },
       { id: 10, name: "Caballo", photo: "../../../images/gameDnD/cab2.jpg" },
       { id: 11, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
-      { id: 12, name: "Leon", photo: "../../../images/gameDnD/leon.jpg" },
+      { id: 12, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
       { id: 13, name: "Cebra", photo: "../../../images/gameDnD/cebrajpg" },
       { id: 14, name: "jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
-      { id: 15, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
+      { id: 15, name: "Hipopótamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
     ];
 
     function generateRandomInt() {
@@ -48,10 +48,10 @@ function Game1() {
       { id: 4, name: "Gallina" },
       { id: 5, name: "Caballo" },
       { id: 6, name: "Tortuga" },
-      { id: 7, name: "Leon" },
+      { id: 7, name: "León" },
       { id: 8, name: "Cebra" },
       { id: 9, name: "Jirafa" },
-      { id: 10, name: "Hipopotamo" },
+      { id: 10, name: "Hipopótamo" },
     ];
 
   const botones = () => {
@@ -153,8 +153,8 @@ function Game1() {
             Swal.fire({
               position: 'top-end',
               icon: 'error',
-              title: 'Algo paso con el servidor',
-              text: 'comuniquese con el administrador',
+              title: 'Algo pasó con el servidor',
+              text: 'comuníquese con el administrador',
               showConfirmButton: false,
               width: '22rem',
               timer: 1500
@@ -166,7 +166,7 @@ function Game1() {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Vuelve Intentar',
+          title: 'Vuelve a Intentar',
           text: ' Respuesta Incorrecta',
           showConfirmButton: false,
           width: '22rem',
