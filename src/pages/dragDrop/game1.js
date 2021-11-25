@@ -29,7 +29,6 @@ function Game1() {
       { id: 10, name: "Caballo", photo: "../../../images/gameDnD/cab2.jpg" },
       { id: 11, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
       { id: 12, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
-<<<<<<< HEAD
       { id: 13, name: "Pingüino", photo: "../../../images/gameDnD/pingüino.jpg"},
       { id: 14, name: "Jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
       { id: 15, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
@@ -37,22 +36,6 @@ function Game1() {
 
     function generateRandomInt() {
       return Math.floor(Math.random() * (15 - 0) + 0);
-=======
-      { id: 13, name: "Cebra", photo: "../../../images/gameDnD/cebrajpg" },
-      { id: 14, name: "jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
-      { id: 15, name: "Hipopótamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
-      { id: 16, name: "Abeja", photo: "../../../images/gameDnD/abeja.jpg" },
-      { id: 17, name: "Ballena", photo: "../../../images/gameDnD/ball.jpg" },
-      { id: 18, name: "Iguana", photo: "../../../images/gameDnD/iguana.webp" },
-      { id: 19, name: "Ganzo", photo: "../../../images/gameDnD/Ganzo.jpg" },
-      { id: 20, name: "Colibrí", photo: "../../../images/gameDnD/colibri.png" },
-
-
-    ];
-
-    function generateRandomInt() {
-      return Math.floor(Math.random() * (20 - 0) + 0);
->>>>>>> c572f21fdf6a825406b6c1d3d47d3121fbb0bc40
     }
     let numeros = Number(generateRandomInt());
 
@@ -66,23 +49,10 @@ function Game1() {
       { id: 5, name: "Caballo" },
       { id: 6, name: "Tortuga" },
       { id: 7, name: "León" },
-<<<<<<< HEAD
       { id: 8, name: "Pingüino" },
       { id: 9, name: "Jirafa" },
       { id: 10, name: "Hipopotamo" },
       
-=======
-      { id: 8, name: "Cebra" },
-      { id: 9, name: "Jirafa" },
-      { id: 10, name: "Hipopótamo" },
-      { id: 11, name: "Abeja" },
-      { id: 12, name: "Ballena" },
-      { id: 13, name: "Iguana" },
-      { id: 14, name: "Ganzo" },
-      { id: 15, name: "Colibrí" },
-
-
->>>>>>> c572f21fdf6a825406b6c1d3d47d3121fbb0bc40
     ];
 
   const botones = () => {
@@ -148,7 +118,7 @@ function Game1() {
         setDato1(prueba)
         btnR = botones()
         setContador(contador+1);
-        if(contador === 10) 
+        if(contador === 5) 
         {
           setContador(0);
           
@@ -184,8 +154,8 @@ function Game1() {
             Swal.fire({
               position: 'top-end',
               icon: 'error',
-              title: 'Algo pasó con el servidor',
-              text: 'comuníquese con el administrador',
+              title: 'Algo paso con el servidor',
+              text: 'comuniquese con el administrador',
               showConfirmButton: false,
               width: '22rem',
               timer: 1500
@@ -197,7 +167,7 @@ function Game1() {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Vuelve a Intentar',
+          title: 'Vuelve Intentar',
           text: ' Respuesta Incorrecta',
           showConfirmButton: false,
           width: '22rem',
