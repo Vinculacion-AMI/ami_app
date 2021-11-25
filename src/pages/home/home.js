@@ -61,7 +61,7 @@ export default function Home() {
                       color="textSecondary"
                       component="p"
                     >
-                      Aprende y divierte con los diferentes niveles.
+                      Aprende y diviértete con los diferentes niveles.
                     </Typography>
                   </CardContent>
                 </CardActionArea>

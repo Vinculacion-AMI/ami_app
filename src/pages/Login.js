@@ -13,7 +13,7 @@ function Login() {
 
   async function login() {
     if (correo === "" || contrasena === "") {
-      alert("Registrate por favor")
+      alert("Regístrate por favor")
     } else {
       let data = { correo, contrasena };
 
@@ -86,7 +86,7 @@ function Login() {
               <Grid container justify="center">
                 <Grid >
                   <Link href="/signup" variant="body2">
-                    Aun no tienes cuenta??
+                    ¿Aún no tienes cuenta?
                   </Link>
                 </Grid>
               </Grid>
