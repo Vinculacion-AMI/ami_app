@@ -98,7 +98,7 @@ function Game1() {
           position: 'top-end',
           icon: 'success',
           title: 'Felicitaciones',
-          text: ' Respuesta correcta',
+          text: ' Respuesta correcta',  
           showConfirmButton: false,
           width: '22rem',
           timer: 1500
