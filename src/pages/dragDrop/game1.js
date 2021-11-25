@@ -20,7 +20,7 @@ function Game1() {
       { id: 1, name: "Perro", photo: "../../../images/gameDnD/perro.jpg" },
       { id: 2, name: "Gato", photo: "../../../images/gameDnD/gati1.jpg" },
       { id: 3, name: "Conejo", photo: "../../../images/gameDnD/cone1.jpg" },
-      { id: 4, name: "Gallina", photo: "../../../images/gameDnD/gal1.jpg" },
+      { id: 4, name: "Oveja", photo: "../../../images/gameDnD/oveja.jpg" },
       { id: 5, name: "Caballo", photo: "../../../images/gameDnD/cab1.jpg" },
       { id: 6, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
       { id: 7, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
@@ -33,8 +33,8 @@ function Game1() {
       { id: 14, name: "Tucán", photo: "../../../images/gameDnD/tucan.jpg" },
       { id: 15, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
       { id: 16, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
-      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
-      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
+      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.jpg" },
+      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.jpg" },
       { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
       { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },  
       { id: 21, name: "Abeja", photo: "../../../images/gameDnD/abeja.jpg" },
@@ -42,6 +42,31 @@ function Game1() {
       { id: 23, name: "Ballena", photo: "../../../images/gameDnD/ball.jpg" },  
       { id: 24, name: "Iguana", photo: "../../../images/gameDnD/ig.jpg" },  
       { id: 25, name: "Elefante", photo: "../../../images/gameDnD/elf.jpg" },  
+      { id: 26,name: "Águila", photo: "../../../images/gameDnD/aguila1.png" },  
+      { id: 27,name: "Bizonte", photo: "../../../images/gameDnD/bizonte1.png" },
+      { id: 28,name: "Búfalo", photo: "../../../images/gameDnD/bufalo1.png" },
+      { id: 29,name: "Búho", photo: "../../../images/gameDnD/buho1.png" },
+      { id: 30,name: "Cerdo", photo: "../../../images/gameDnD/cerdo1.png" },
+      { id: 31,name: "Cocodrilo", photo: "../../../images/gameDnD/cocodrilo1.png" },
+      { id: 32,name: "Conejo", photo: "../../../images/gameDnD/conejo1.png" },
+      { id: 33,name: "Delfín", photo: "../../../images/gameDnD/delfin1.png" },
+      { id: 34,name: "Foca", photo: "../../../images/gameDnD/foca1.png" },
+      { id: 35,name: "Gallina", photo: "../../../images/gameDnD/gallina1.png" },
+      { id: 36,name: "Jaguar", photo: "../../../images/gameDnD/jaguar.png" },
+      { id: 37,name: "Lobo", photo: "../../../images/gameDnD/lobo1.png" },
+      { id: 38,name: "Mono", photo: "../../../images/gameDnD/mono1.png" },
+      { id: 39,name: "Ñu", photo: "../../../images/gameDnD/ñu1.png" },
+      { id: 40,name: "Orca", photo: "../../../images/gameDnD/orca1.png" },
+      { id: 41,name: "Oso", photo: "../../../images/gameDnD/oso1.png" },
+      { id: 42,name: "Pantera", photo: "../../../images/gameDnD/pantera1.png" },
+      { id: 43,name: "Pato", photo: "../../../images/gameDnD/pato1.png" },
+      { id: 44,name: "Pescad", photo: "../../../images/gameDnD/pescado1.png" },
+      { id: 45,name: "Ratón", photo: "../../../images/gameDnD/raton1.png" },
+      { id: 46,name: "Serpiente", photo: "../../../images/gameDnD/serpiente.png" },
+      { id: 47,name: "Tigre", photo: "../../../images/gameDnD/tigre1.png" },
+      { id: 48 ,name: "Vaca", photo: "../../../images/gameDnD/vaca1.png" },
+      { id: 49,name: "Cebra", photo: "../../../images/gameDnD/zebra1.png" },
+      { id: 50,name: "Zorro", photo: "../../../images/gameDnD/zorro1.png" },
 
 
 
@@ -51,7 +76,7 @@ function Game1() {
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (25 - 0) + 0);
+      return Math.floor(Math.random() * (50 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -82,7 +107,33 @@ function Game1() {
       {id:22, name: "Colibri" },
       {id:23, name: "Ballena" },
       {id:24, name: "Iguana" },
-      {id:25, name: "Elefante" }
+      {id:25, name: "Elefante" },
+      {id:26, name: "Águila" },
+      {id:27, name: "Bizonte" },
+      {id:28, name: "Búfalo" },
+      {id:29, name: "Búho" },
+      {id:30, name: "Cerdo" },
+      {id:31, name: "Cocodrilo" },
+      {id:32, name: "Conejo" },
+      {id:33, name: "Delfín" },
+      {id:34, name: "Foca" },
+      {id:35, name: "Gallina" },
+      {id:36, name: "Jaguar" },
+      {id:37, name: "Lobo" },
+      {id:38, name: "Mono" },
+      {id:39, name: "Ñu" },
+      {id:40, name: "Orca" },
+      {id:41, name: "Oso" },
+      {id:42, name: "Pantera" },
+      {id:43, name: "Pato" },
+      {id:44, name: "Pescado" },
+      {id:45, name: "Ratón" },
+      {id:46, name: "Serpiente" },
+      {id:47, name: "Tigre" },
+      {id:48, name: "Vaca" },
+      {id:49, name: "Cebra" },
+      {id:50, name: "Zorro" }
+
 
 
 
@@ -91,7 +142,7 @@ function Game1() {
   const botones = () => {
     var data2 = [];
     let aleatorio = data.map((item) => {
-      let random = data[Math.floor(Math.random() * data.length/25)];
+      let random = data[Math.floor(Math.random() * data.length/50)];
         if (!data2.includes(random)) {
           data2.push(random);
         }
