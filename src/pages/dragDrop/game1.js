@@ -32,10 +32,17 @@ function Game1() {
       { id: 13, name: "Cebra", photo: "../../../images/gameDnD/cebrajpg" },
       { id: 14, name: "jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
       { id: 15, name: "Hipopótamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
+      { id: 16, name: "Abeja", photo: "../../../images/gameDnD/abeja.jpg" },
+      { id: 17, name: "Ballena", photo: "../../../images/gameDnD/ball.jpg" },
+      { id: 18, name: "Iguana", photo: "../../../images/gameDnD/iguana.webp" },
+      { id: 19, name: "Ganzo", photo: "../../../images/gameDnD/Ganzo.jpg" },
+      { id: 20, name: "Colibrí", photo: "../../../images/gameDnD/colibri.png" },
+
+
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (15 - 0) + 0);
+      return Math.floor(Math.random() * (20 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -52,6 +59,13 @@ function Game1() {
       { id: 8, name: "Cebra" },
       { id: 9, name: "Jirafa" },
       { id: 10, name: "Hipopótamo" },
+      { id: 11, name: "Abeja" },
+      { id: 12, name: "Ballena" },
+      { id: 13, name: "Iguana" },
+      { id: 14, name: "Ganzo" },
+      { id: 15, name: "Colibrí" },
+
+
     ];
 
   const botones = () => {
