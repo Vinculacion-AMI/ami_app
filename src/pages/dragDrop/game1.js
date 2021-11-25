@@ -51,7 +51,7 @@ function Game1() {
       { id: 32,name: "Conejo", photo: "../../../images/gameDnD/conejo1.png" },
       { id: 33,name: "Delfín", photo: "../../../images/gameDnD/delfin1.png" },
       { id: 34,name: "Foca", photo: "../../../images/gameDnD/foca1.png" },
-      { id: 35,name: "Gallina", photo: "../../../images/gameDnD/gallina1.png" },
+      { id: 35,name: "Gallina", photo: "../../../images/gameDnD/gal1.png" },
       { id: 36,name: "Jaguar", photo: "../../../images/gameDnD/jaguar.png" },
       { id: 37,name: "Lobo", photo: "../../../images/gameDnD/lobo1.png" },
       { id: 38,name: "Mono", photo: "../../../images/gameDnD/mono1.png" },
