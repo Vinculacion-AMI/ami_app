@@ -22,25 +22,25 @@ function Game1() {
       { id: 3, name: "Conejo", photo: "../../../images/gameDnD/cone1.jpg" },
       { id: 4, name: "Gallina", photo: "../../../images/gameDnD/gal1.jpg" },
       { id: 5, name: "Caballo", photo: "../../../images/gameDnD/cab1.jpg" },
-      { id: 6, name: "Perro", photo: "../../../images/gameDnD/perr1.jpg" },
-      { id: 7, name: "Gato", photo: "../../../images/gameDnD/gati2.jpg" },
-      { id: 8, name: "Conejo", photo: "../../../images/gameDnD/cone2.jpg" },
-      { id: 9, name: "Gallina", photo: "../../../images/gameDnD/gal2.jpg" },
-      { id: 10, name: "Caballo", photo: "../../../images/gameDnD/cab2.jpg" },
-      { id: 11, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
-      { id: 12, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },
-      { id: 13, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
-      { id: 14, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
-      { id: 15, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
-      { id: 21, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
-      { id: 22, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
-      { id: 23, name: "Pingüino", photo: "../../../images/gameDnD/pingüino.jpg"},
-      { id: 24, name: "Jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
-      { id: 25, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },  
+      { id: 6, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
+      { id: 7, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
+      { id: 8, name: "Pingüino", photo: "../../../images/gameDnD/pingüino.jpg"},
+      { id: 9, name: "Jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
+      { id: 10, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
+      { id: 11, name: "Ardilla", photo: "../../../images/gameDnD/ardilla.jpg" },
+      { id: 12, name: "Burro", photo: "../../../images/gameDnD/burro.jpg" },
+      { id: 13, name: "Loro", photo: "../../../images/gameDnD/loro.jpg" },
+      { id: 14, name: "Tucán", photo: "../../../images/gameDnD/tucan.jpg" },
+      { id: 15, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
+      { id: 16, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
+      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
+      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
+      { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
+      { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },  
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (25 - 0) + 0);
+      return Math.floor(Math.random() * (20 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -52,17 +52,21 @@ function Game1() {
       { id: 3, name: "Gato" },
       { id: 4, name: "Gallina" },
       { id: 5, name: "Caballo" },
-      { id: 6, name: "Camarón" },
-      { id: 7, name: "Mariposa" },
-      { id: 8, name: "Medusa" },
-      { id: 9, name: "Pingüino" },
-      { id: 10, name: "Tiburón" },
-      { id: 11, name: "Tortuga" },
-      { id: 12, name: "León" },
-      { id: 13, name: "Pingüino" },
-      { id: 14, name: "Jirafa" },
-      { id: 15, name: "Hipopotamo" }
-      
+      { id: 6, name: "Tortuga" },
+      { id: 7, name: "León" },
+      { id: 8, name: "Pingüino" },
+      { id: 9, name: "Jirafa" },
+      { id: 10, name: "Hipopotamo" },
+      { id: 11, name: "Ardilla" },
+      { id: 12, name: "Burro" },
+      { id: 13, name: "Loro" },
+      { id: 14, name: "Tucán" },
+      { id: 15, name: "Venado" },
+      {id:16, name: "Canario" },
+      {id:17, name: "Camarón" },
+      {id:18, name: "Tiburón" },
+      {id:19, name: "Medusa" },
+      {id:20, name: "Mariposa" }
     ];
 
   const botones = () => {
@@ -128,7 +132,7 @@ function Game1() {
         setDato1(prueba)
         btnR = botones()
         setContador(contador+1);
-        if(contador === 10) 
+        if(contador === 20) 
         {
           setContador(0);
           
@@ -137,7 +141,7 @@ function Game1() {
           let data = {
             persons: user,
             nivel: 2,
-            Ptotal: 15
+            Ptotal: 50
           }
           let result = await fetch(process.env.REACT_APP_BACKEND+"/score", {
             method: "POST",
