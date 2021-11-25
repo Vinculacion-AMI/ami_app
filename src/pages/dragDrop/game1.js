@@ -27,7 +27,17 @@ function Game1() {
       { id: 8, name: "Conejo", photo: "../../../images/gameDnD/cone2.jpg" },
       { id: 9, name: "Gallina", photo: "../../../images/gameDnD/gal2.jpg" },
       { id: 10, name: "Caballo", photo: "../../../images/gameDnD/cab2.jpg" },
-    ];
+      { id: 11, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
+      { id: 12, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },
+      { id: 13, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
+      { id: 14, name: "Pingüino", photo: "../../../images/gameDnD/pinguino.png" },
+      { id: 15, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
+      { id: 16, name: "Mariposa", photo: "../../../images/gameDnD/mariposa1.png" },
+      { id: 17, name: "Medusa", photo: "../../../images/gameDnD/medusa1.png" },
+      { id: 18, name: "Pingüino", photo: "../../../images/gameDnD/pinguino1.png" },
+      { id: 19, name: "Tiburón", photo: "../../../images/gameDnD/tiburon1.png" },
+      { id: 20, name: "Camarón", photo: "../../../images/gameDnD/camaron1.png" }
+      ];
 
     function generateRandomInt() {
       return Math.floor(Math.random() * (10 - 0) + 0);
@@ -42,12 +52,17 @@ function Game1() {
       { id: 3, name: "Gato" },
       { id: 4, name: "Gallina" },
       { id: 5, name: "Caballo" },
+      { id: 6, name: "Camarón" },
+      { id: 7, name: "Mariposa" },
+      { id: 8, name: "Medusa" },
+      { id: 9, name: "Pingüino" },
+      { id: 10, name: "Tiburón" }
     ];
 
   const botones = () => {
     var data2 = [];
     let aleatorio = data.map((item) => {
-      let random = data[Math.floor(Math.random() * data.length/5)];
+      let random = data[Math.floor(Math.random() * data.length/10)];
         if (!data2.includes(random)) {
           data2.push(random);
         }
@@ -107,7 +122,7 @@ function Game1() {
         setDato1(prueba)
         btnR = botones()
         setContador(contador+1);
-        if(contador === 5) 
+        if(contador === 10) 
         {
           setContador(0);
           
@@ -116,7 +131,7 @@ function Game1() {
           let data = {
             persons: user,
             nivel: 2,
-            Ptotal: 5
+            Ptotal: 10
           }
           let result = await fetch(process.env.REACT_APP_BACKEND+"/score", {
             method: "POST",
