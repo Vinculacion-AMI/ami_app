@@ -2,12 +2,12 @@ export default {
   Monosílabas: {
     nivel1: [
       {
-        title: "mar",
+        title: "Mar",
         category: "Monosílabas",
         img: "../../../images/syllabesIma/mar.jpg",
       },
       {
-        title: "mariposa",
+        title: "Mariposa",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/mariposa.jpg",
       },
@@ -15,7 +15,7 @@ export default {
 
     nivel2: [
       {
-        title: "león",
+        title: "León",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/leon.jpg",
       },
@@ -32,25 +32,25 @@ export default {
         img: "../../../images/syllabesIma/flor.png",
       },
       {
-        title: "mamá",
+        title: "Mamá",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/mama.jpg",
       },
 
       {
-        title: "casa",
+        title: "Casa",
         category: "Bisílabas",
         img:"../../../images/syllabesIma/casa.jpg",
       },
     ],
     nivel4: [
       {
-        title: "niño",
+        title: "Niño",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/niño.jpg",
       },
       {
-        title: "chango",
+        title: "Chango",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/chango.jpg",
       },
@@ -81,12 +81,12 @@ export default {
   Bisílabas: {
     nivel1: [
       {
-        title: "árbol",
+        title: "Árbol",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/arbol.jpg",
       },
       {
-        title: "arcoiris",
+        title: "Arcoiris",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/arcoiris.jpg",
       },
@@ -98,24 +98,24 @@ export default {
         img: "../../../images/syllabesIma/diez.jpg",
       },
       {
-        title: "río",
+        title: "Río",
         category: "Monosílabas",
         img: "../../../images/syllabesIma/rio.jpg",
       },
     ],
     nivel3: [
       {
-        title: "llave",
+        title: "Llave",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/llaves.png",
       },
       {
-        title: "elefante",
+        title: "Elefante",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/elefante.jpg",
       },
       {
-        title: "estrella",
+        title: "Estrella",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/estrella.png",
       },
@@ -128,12 +128,12 @@ export default {
       },
 
       {
-        title: "araña",
+        title: "Araña",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/araña.jpg",
       },
       {
-        title: "oso",
+        title: "Oso",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/oso.jpg",
       },
@@ -142,24 +142,24 @@ export default {
   Trisílabas:{
     nivel1:[
       {
-        title: "naranja",
+        title: "Naranja",
         category: "Trisílabas",
         img: "../../../images/syllabesIma/naranja.jpg",
       },
       {
-        title: "cama",
+        title: "Cama",
         category: "Bisílabas",
         img: "https://i.pinimg.com/736x/2b/7f/76/2b7f768db24d3bd3b7b33beca59decfe.jpg",
       },
       {
-        title: "flores",
+        title: "Flores",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/flores.jpg",
       },
     ],
     nivel2:[
       {
-        title: "doncella",
+        title: "Doncella",
         category: "Trisílabas",
         img: "https://image.freepik.com/vector-gratis/personaje-doncella-nieve-dibujado-mano_23-2148786577.jpg",
       },
@@ -181,12 +181,12 @@ export default {
         img: "../../../images/syllabesIma/cangrejo.jpg",
       },
       {
-        title: "reloj",
+        title: "Reloj",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/reloj.png",      
       },
       {
-        title: "Gatos",
+        title: "Gato",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/gato.jpg",      },
     ],
@@ -202,7 +202,7 @@ export default {
         img: "../../../images/syllabesIma/caballo.jpg",      
       },
       {
-        title: "tigre",
+        title: "Tigre",
         category: "Bisílabas",
         img: "../../../images/syllabesIma/tigre.jpg",      },
     ],

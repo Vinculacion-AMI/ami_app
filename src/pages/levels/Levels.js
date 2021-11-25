@@ -93,7 +93,7 @@ function Levels({ logout, ...rest }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Aqui pondras a prueba tus habilidades.
+                      Aquí podrás poner a prueba tus habilidades.
                     </Typography>
                     <br />
                     <Button
@@ -121,7 +121,7 @@ function Levels({ logout, ...rest }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Deberas repetir las letras del abecedario.
+                      Deberás repetir las letras del abecedario.
                     </Typography>
                     <br />
                     <Button
@@ -141,45 +141,18 @@ function Levels({ logout, ...rest }) {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      APRENDE LOS FONEMAS 
+                      APRENDE LOS FONEMAS
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Conoce las fonemas para escribir palabras.
+                      Conoce los fonemas, te ayudarán para escribir palabras.
                     </Typography>
                     <br />
                     <Button
                       onClick={learn}
-                      variant="contained"
-                      color="primary"
-                      style={{ borderRadius: 20 }}
-                    >
-                      Jugar
-                    </Button>
-                  </CardContent>
-                </Card>
-                <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image="../../images/menu/forma_palabras1.png"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Forma sílabas con el abecedario
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Deberas ordenar las letras para formar silabas
-                    </Typography>
-                    <br />
-                    <Button
-                      onClick={puzzleInit}
                       variant="contained"
                       color="primary"
                       style={{ borderRadius: 20 }}
@@ -202,7 +175,7 @@ function Levels({ logout, ...rest }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Deberas ordenar las palabra de manera correcta.
+                      Deberás ordenar las palabra de manera correcta.
                     </Typography>
                     <br />
                     <Button
@@ -229,7 +202,7 @@ function Levels({ logout, ...rest }) {
                       color="textSecondary"
                       component="p"
                     >
-                      Deberas reconocer que animal es.
+                      Deberás reconocer ¿Qué animal es?.
                     </Typography>
                     <br />
                     <Button
@@ -276,18 +249,45 @@ function Levels({ logout, ...rest }) {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Identifica las palabras Monosílabas y bisílabas 
+                      Identifica las palabras Monosílabas y Bisílabas
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      Deberas reconocer las palabras monosílabas y bisílabas
+                      Deberás reconocer las palabras Monosílabas y Bisílabas
                     </Typography>
                     <br />
                     <Button
                       onClick={syllables}
+                      variant="contained"
+                      color="primary"
+                      style={{ borderRadius: 20 }}
+                    >
+                      Jugar
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="../../images/menu/forma_palabras1.png"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Forma sílabas con el abecedario
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Deberás ordenar las letras para formar sílabas
+                    </Typography>
+                    <br />
+                    <Button
+                      onClick={puzzleInit}
                       variant="contained"
                       color="primary"
                       style={{ borderRadius: 20 }}

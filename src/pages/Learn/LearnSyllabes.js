@@ -56,7 +56,7 @@ function LearnSyllabes() {
             xs={12}
             sm={12}
           >
-            <h2>Aprende las silabas</h2>
+            <h2>Aprende las sílabas</h2>
             <Grid style={{marginLeft:75, marginRight:75}}>
               <Carousel emulateTouch={true}>
                 {img.map((e) => (

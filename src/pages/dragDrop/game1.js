@@ -30,17 +30,17 @@ function Game1() {
       { id: 11, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
       { id: 12, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },
       { id: 13, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
-      { id: 14, name: "Pingüino", photo: "../../../images/gameDnD/pinguino.png" },
+      { id: 14, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
       { id: 15, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
-      { id: 16, name: "Mariposa", photo: "../../../images/gameDnD/mariposa1.png" },
-      { id: 17, name: "Medusa", photo: "../../../images/gameDnD/medusa1.png" },
-      { id: 18, name: "Pingüino", photo: "../../../images/gameDnD/pinguino1.png" },
-      { id: 19, name: "Tiburón", photo: "../../../images/gameDnD/tiburon1.png" },
-      { id: 20, name: "Camarón", photo: "../../../images/gameDnD/camaron1.png" }
-      ];
+      { id: 21, name: "Tortuga", photo: "../../../images/gameDnD/tortuga.jpg" },
+      { id: 22, name: "León", photo: "../../../images/gameDnD/leon.jpg" },
+      { id: 23, name: "Pingüino", photo: "../../../images/gameDnD/pingüino.jpg"},
+      { id: 24, name: "Jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
+      { id: 25, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },  
+    ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (10 - 0) + 0);
+      return Math.floor(Math.random() * (25 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -56,13 +56,19 @@ function Game1() {
       { id: 7, name: "Mariposa" },
       { id: 8, name: "Medusa" },
       { id: 9, name: "Pingüino" },
-      { id: 10, name: "Tiburón" }
+      { id: 10, name: "Tiburón" },
+      { id: 11, name: "Tortuga" },
+      { id: 12, name: "León" },
+      { id: 13, name: "Pingüino" },
+      { id: 14, name: "Jirafa" },
+      { id: 15, name: "Hipopotamo" }
+      
     ];
 
   const botones = () => {
     var data2 = [];
     let aleatorio = data.map((item) => {
-      let random = data[Math.floor(Math.random() * data.length/10)];
+      let random = data[Math.floor(Math.random() * data.length/25)];
         if (!data2.includes(random)) {
           data2.push(random);
         }
@@ -131,7 +137,7 @@ function Game1() {
           let data = {
             persons: user,
             nivel: 2,
-            Ptotal: 10
+            Ptotal: 15
           }
           let result = await fetch(process.env.REACT_APP_BACKEND+"/score", {
             method: "POST",
