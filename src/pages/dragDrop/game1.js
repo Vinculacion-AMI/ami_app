@@ -32,10 +32,15 @@ function Game1() {
       { id: 13, name: "Pingüino", photo: "../../../images/gameDnD/pingüino.jpg"},
       { id: 14, name: "Jirafa", photo: "../../../images/gameDnD/jirafa.jpg" },
       { id: 15, name: "Hipopotamo", photo: "../../../images/gameDnD/hipopotamo.jpg" },
+      { id: 16, name: "Ardilla", photo: "../../../images/gameDnD/ardilla.jpg" },
+      { id: 17, name: "Burro", photo: "../../../images/gameDnD/burro.jpg" },
+      { id: 18, name: "Loro", photo: "../../../images/gameDnD/loro.jpg" },
+      { id: 19, name: "Tucán", photo: "../../../images/gameDnD/tucan.jpg" },
+      { id: 20, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (15 - 0) + 0);
+      return Math.floor(Math.random() * (20 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -52,6 +57,11 @@ function Game1() {
       { id: 8, name: "Pingüino" },
       { id: 9, name: "Jirafa" },
       { id: 10, name: "Hipopotamo" },
+      { id: 11, name: "Ardilla" },
+      { id: 12, name: "Burro" },
+      { id: 13, name: "Loro" },
+      { id: 14, name: "Tucán" },
+      { id: 15, name: "Venado" },
       
     ];
 
@@ -118,7 +128,7 @@ function Game1() {
         setDato1(prueba)
         btnR = botones()
         setContador(contador+1);
-        if(contador === 5) 
+        if(contador === 20) 
         {
           setContador(0);
           
