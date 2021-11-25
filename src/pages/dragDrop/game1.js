@@ -33,14 +33,25 @@ function Game1() {
       { id: 14, name: "Tucán", photo: "../../../images/gameDnD/tucan.jpg" },
       { id: 15, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
       { id: 16, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
-      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
+      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.jpg" },
       { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
       { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
       { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },  
+      { id: 21, name: "Abeja", photo: "../../../images/gameDnD/abeja.jpg" },
+      { id: 22, name: "Colibri", photo: "../../../images/gameDnD/colibri.jpg" },  
+      { id: 23, name: "Ballena", photo: "../../../images/gameDnD/ball.jpg" },  
+      { id: 24, name: "Iguana", photo: "../../../images/gameDnD/ig.jpg" },  
+      { id: 25, name: "Elefante", photo: "../../../images/gameDnD/elf.jpg" },  
+
+
+
+
+  
+
     ];
 
     function generateRandomInt() {
-      return Math.floor(Math.random() * (20 - 0) + 0);
+      return Math.floor(Math.random() * (25 - 0) + 0);
     }
     let numeros = Number(generateRandomInt());
 
@@ -66,7 +77,15 @@ function Game1() {
       {id:17, name: "Camarón" },
       {id:18, name: "Tiburón" },
       {id:19, name: "Medusa" },
-      {id:20, name: "Mariposa" }
+      {id:20, name: "Mariposa" },
+      {id:21, name: "Abeja" },
+      {id:22, name: "Colibri" },
+      {id:23, name: "Ballena" },
+      {id:24, name: "Iguana" },
+      {id:25, name: "Elefante" }
+
+
+
     ];
 
   const botones = () => {
