@@ -33,10 +33,10 @@ function Game1() {
       { id: 14, name: "Tucán", photo: "../../../images/gameDnD/tucan.jpg" },
       { id: 15, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
       { id: 16, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
-      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.png" },
-      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
-      { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
-      { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },  
+      { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.jpg" },
+      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.jpg" },
+      { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.jpg" },
+      { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.jpg" },  
     ];
 
     function generateRandomInt() {
