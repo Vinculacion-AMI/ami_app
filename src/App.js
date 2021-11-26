@@ -119,7 +119,7 @@ function Login(props) {
           if (state.dismiss === Swal.DismissReason.timer || state.isDismissed) {
             localStorage.setItem("token", result.token);
             localStorage.setItem("user_id", result.id);
-           /*  localStorage.setItem("isadmin", result.isAdmin); */
+           localStorage.setItem("isadmin", result.isAdmin); 
             authenticate.onAuthentication();
             props.history.push("/home");
           }
