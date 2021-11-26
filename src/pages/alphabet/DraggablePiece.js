@@ -5,11 +5,19 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { useStyles } from "./style";
 import useForceUpdate from "use-force-update";
+import { Button } from "@material-ui/core";
 import Zoom from "@material-ui/core/Zoom";
+import { useHistory } from "react-router-dom";
 //Function
 import getDataUser from "../../util/get";
 
 export default function DraggablePiece(props) {
+  let history = useHistory();
+
+  const reproductor = () => {
+    history.push("/reproductor");
+  };
+
   const [textContent, setTextContent] = useState(Array),
     [stateArrayItems, setStateArrayItems] = useState(Array),
     [puzzleSolve, setPuzzleSolve] = useState(Array);
@@ -18,7 +26,7 @@ export default function DraggablePiece(props) {
   useEffect(() => {
     begingComponents();
     forceUpdate();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const getData = async () => {
     const user = localStorage.getItem("user_id");
@@ -158,6 +166,17 @@ export default function DraggablePiece(props) {
                   </Grid>
                 );
               })}
+               <Grid container justify="center">
+              <Button
+                onClick={reproductor}
+                variant="contained"
+                color="secondary"
+                style={{ borderRadius: 50 }}
+                className={classes.buttonCheck}
+              >
+                Regresar 
+              </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

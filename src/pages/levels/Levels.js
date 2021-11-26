@@ -161,33 +161,7 @@ function Levels({ logout, ...rest }) {
                     </Button>
                   </CardContent>
                 </Card>
-                <Card className={classes.root}>
-                  <CardMedia
-                    className={classes.media}
-                    image="../../images/menu/ordena.png"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Ordena las palabras
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Deberás ordenar las palabra de manera correcta.
-                    </Typography>
-                    <br />
-                    <Button
-                      onClick={puzzle}
-                      variant="contained"
-                      color="primary"
-                      style={{ borderRadius: 20 }}
-                    >
-                      Jugar
-                    </Button>
-                  </CardContent>
-                </Card>
+
                 <Card className={classes.root}>
                   <CardMedia
                     className={classes.media}
@@ -288,6 +262,33 @@ function Levels({ logout, ...rest }) {
                     <br />
                     <Button
                       onClick={puzzleInit}
+                      variant="contained"
+                      color="primary"
+                      style={{ borderRadius: 20 }}
+                    >
+                      Jugar
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className={classes.root}>
+                  <CardMedia
+                    className={classes.media}
+                    image="../../images/menu/ordena.png"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Ordena las palabras
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Deberás ordenar las palabra de manera correcta.
+                    </Typography>
+                    <br />
+                    <Button
+                      onClick={puzzle}
                       variant="contained"
                       color="primary"
                       style={{ borderRadius: 20 }}

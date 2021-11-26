@@ -34,11 +34,7 @@ function Game1() {
       { id: 15, name: "Venado", photo: "../../../images/gameDnD/venado.jpg" },
       { id: 16, name: "Canario", photo: "../../../images/gameDnD/canario.jpg" },
       { id: 17, name: "Camarón", photo: "../../../images/gameDnD/camaron.jpg" },
-<<<<<<< HEAD
       { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.jpg" },
-=======
-      { id: 18, name: "Tiburón", photo: "../../../images/gameDnD/tiburon.png" },
->>>>>>> 16b35b98ff9a7421b4bd2365ae63df8349a1b22f
       { id: 19, name: "Medusa", photo: "../../../images/gameDnD/medusa.png" },
       { id: 20, name: "Mariposa", photo: "../../../images/gameDnD/mariposa.png" },  
       { id: 21, name: "Abeja", photo: "../../../images/gameDnD/abeja.jpg" },
@@ -71,12 +67,6 @@ function Game1() {
       { id: 48 ,name: "Vaca", photo: "../../../images/gameDnD/vaca1.png" },
       { id: 49,name: "Cebra", photo: "../../../images/gameDnD/zebra1.png" },
       { id: 50,name: "Zorro", photo: "../../../images/gameDnD/zorro1.png" },
-
-
-
-
-  
-
     ];
 
     function generateRandomInt() {
@@ -96,7 +86,7 @@ function Game1() {
       { id: 7, name: "León" },
       { id: 8, name: "Pingüino" },
       { id: 9, name: "Jirafa" },
-      { id: 10, name: "Hipopotamo" },
+      { id: 10, name: "Hipopótamo" },
       { id: 11, name: "Ardilla" },
       { id: 12, name: "Burro" },
       { id: 13, name: "Loro" },
@@ -137,9 +127,6 @@ function Game1() {
       {id:48, name: "Vaca" },
       {id:49, name: "Cebra" },
       {id:50, name: "Zorro" }
-
-
-
 
     ];
 
